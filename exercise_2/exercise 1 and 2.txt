@@ -1,0 +1,72 @@
+Jass
+===========
+Inaccessible: I don't know who has which cards
+Determinstic: There are clear rules for the card game
+Nonepisodic: I need to remember which cards where played to calculate chances
+Static: Only one player plays at a time
+Multi-Agent: I am playing against other players (agents)
+
+Jass Subtasks
+===========
+Calculate probability of which other player has which card
+Analyze cards in your hand
+Descend in game tree, giving each possible outcome a score
+Heuristic for leafs of game tree descent
+Rule Engine and Winning conditions
+
+
+
+Building a house
+===========
+Inaccessible: In the real world, we neber know the entire environment
+Stochastic: In the real world, nothing is ever completely deterministic.
+Nonepisodic: Knowing what is inside a wall or under a floor is very relevant to the further construction.
+Dynamic: Concrete hardens, rocks fall, wind blows.
+Continuous: The real world is clearly continuous.
+Single-Agent: I can reasonably expect to be the only agent working on constructing the house
+
+House Building Subtasks
+===========
+Analyze the ground and consistency beneath it
+dig hole
+lay foundation
+set concrete
+create windows and doors
+put in plumbing
+...
+
+
+
+
+MASON: Ant Foraging
+===========
+
+Inaccessible: If each ant had access to complete state of the environment, the exercise of finding the food makes no sense. Each ant only knows its immediate surroundings.
+Deterministic: Nothing happens in the world except agents moving, exreting pheromones, and pheromones diminishing. Pheromone behaviour might as well be modelled stochastically.
+Episodic: Only the current state of the pheromones will guide the ant movements, previous steps are not relevant.
+Static: This depends on whether you consider each and seperately, or all ants as an agent. But as all of the world is simulated, and nothing happens that is not in the simulation loop, we can consider this a static problem.
+Discrete: The simulated world is clearly discrete, as ants can only move exactly one pixel in four directions in a game turn.
+Multi-Agent: Many Ants = Many Agents
+
+
+MASON: Light Cycles
+===========
+Accessible: Agents and any human player know the entire map
+Deterministic: There is no randomness in the game
+Episodic: The entire history is visible at any point in time, so no memory is needed
+Dynamic: Your cycle moves as you are thinking
+Discrete: Pixel-by-Pixel movement
+Muli-Agent: Many Players in the game
+
+
+MASON: Woims
+===========
+Accessible: Obstacles and other worms are always known
+Deterministic: No randomness in game
+Episodic: History not relevant
+Dynamic: Worms move all the time
+Discrete: Pixel by Pixel movement
+Multi-Agent: There are many woims
+
+
+
