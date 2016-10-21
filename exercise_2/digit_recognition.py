@@ -1,4 +1,4 @@
-import wave
+import wave, Levenshtein
 
 
 class Digit:
@@ -20,12 +20,7 @@ def create_set(path):
 
 
 def distance(d1, d2):
-    distance = 0
-    for d1_ in d1.signal:
-        for d2_ in d2.signal:
-            print list(d1_)[0]
-            print list(d2_)[0]
-    return distance
+    return Levenshtein.ratio(d1.signal, d2.signal)
 
 
 def classify(point, training_set):
@@ -33,9 +28,10 @@ def classify(point, training_set):
     nearest_distance = 10
     for learn in training_set:
         d = distance(learn, point)
+        print(d)
         if d < nearest_distance:
             nearest = learn
-            nearest_distance = distance
+            nearest_distance = d
     return nearest.value
 
 
